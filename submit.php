@@ -11,16 +11,14 @@
 <body>
 
 <div class="container-fluid">
-    <h1>My First Bootstrap Page</h1>
-    <p>This is some text.</p>
+    <h1>My second bootstrap page</h1>
     <button type="button" class="btn btn-default">Default</button>
     <button type="button" class="btn btn-primary">Primary</button>
     <button type="button" class="btn btn-success">Success</button>
     <button type="button" class="btn btn-info">Info</button>
     <button type="button" class="btn btn-warning">Warning</button>
     <button type="button" class="btn btn-danger">Danger</button>
-    <button type="button" class="btn btn-link">Link</button>
-    <a href="submit.php" class="btn btn-info" role="button">Link Button</a>
+    <a href="index.php" class="btn btn-info" role="button">Link Button</a>
 </div>
 
 </body>
