@@ -1,26 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Bootstrap Example</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-</head>
-<body>
+<?php
 
-<div class="container-fluid">
-    <h1>My second bootstrap page</h1>
-    <button type="button" class="btn btn-default">Default</button>
-    <button type="button" class="btn btn-primary">Primary</button>
-    <button type="button" class="btn btn-success">Success</button>
-    <button type="button" class="btn btn-info">Info</button>
-    <button type="button" class="btn btn-warning">Warning</button>
-    <button type="button" class="btn btn-danger">Danger</button>
-    <a href="index.php" class="btn btn-info" role="button">Link Button</a>
-</div>
+$dsn = 'mysql:dbname=bootcamp;host=localhost';
+$user = 'bootcamp';
+$password = '';
 
-</body>
-</html>
-</div>
+try {
+    $dbh = new PDO($dsn, $user, $password);
+} catch (PDOException $e) {
+    echo 'Connection failed: ' . $e->getMessage();
+}
+
+$name = $_REQUEST['name'];
+$comment = $_REQUEST['comment'];
+
+setcookie('NameCookie', $name);
+
+$sth = $dbh->prepare("INSERT INTO `comments` (`name`, `comment`) VALUES (:name, :comment);");
+$sth->bindParam(':name', $name);
+$sth->bindParam(':comment', $comment);
+
+try {
+    $sth->execute();
+} catch (PDOException $e) {
+    echo 'ERROR: ' . $e->getMessage();
+}
+
+
+header('location: /');
