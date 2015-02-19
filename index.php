@@ -22,7 +22,7 @@
     <a href="submit.php" class="btn btn-info" role="button">Link Button</a>
     <hr>
     <div class="form-group">
-        <form method="post" action="submit.php">
+        <form method="post" action="oop.php">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" value="<?= $_COOKIE["NameCookie"] ?>"><br>
             <label for="comment">Comment:</label>
@@ -58,6 +58,7 @@
                 echo '<tr>';
                 echo '<td>' . $comment['name'] . '</td>';
                 echo '<td>' . $comment['comment'] . '</td>';
+                echo "<td><a href='oop.php?delete={$comment['id']}' type=button class='btn btn-danger'>Delete</a></td>";
                 echo '</tr>';
             }
             ?>
