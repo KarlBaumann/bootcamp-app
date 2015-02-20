@@ -6,7 +6,7 @@
  * Time: 11:39 AM
  */
 
-require_once __DIR__ . '/../vendor/composer/autoload_real.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 
 //die(__DIR__ . '/../vendor/composer/autoload_real.php');
