@@ -18,7 +18,7 @@
     </testsuites>
     <filter>
         <whitelist>
-            <directory>./src</directory>
+            <directory>./classes</directory>
         </whitelist>
     </filter>
 </phpunit>
