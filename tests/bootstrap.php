@@ -7,6 +7,3 @@
  */
 
 require_once __DIR__ . '/../vendor/autoload.php';
-
-
-//die(__DIR__ . '/../vendor/composer/autoload_real.php');
