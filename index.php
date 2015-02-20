@@ -8,32 +8,29 @@
 
 
 require_once __DIR__ . '/vendor/autoload.php';
+use Bootcamp\Demo\Rectangle;
 
 class SilexRectangle
 {
     public $width;
     public $height;
 
+    function __construct($w, $h)
+    {
+        $this->height = $h;
+        $this->width = $w;
+    }
+
     public function ahhh()
     {
         $app = new Silex\Application();
 
-        $app->get('/rectangle:{width}:{height}', function (SilexRectangle->$width, $height) use ($app) {
-        $return = new \Bootcamp\Demo\Rectangle($width, $height);
+        $app->get('/rectangle:{width}:{height}', function ($this->width, $this->height) use ($app) {
+        $return = new Rectangle($this->width, $this->height);
         $return = $return->getArea();
-        return $return;
+        return $app->run();
     });
 
-        return $app->run();
-    }
-}
 
-class LessThanTest extends PHPUnit_Framework_TestCase
-{
-    public function testFailure()
-    {
-        $ahh = new SilexRectangle();
-        $ahh->ahhh();
-        $this->assertLessThan(0, $width);
     }
 }
