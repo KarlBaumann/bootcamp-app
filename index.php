@@ -25,7 +25,7 @@ class SilexRectangle
     {
         $app = new Silex\Application();
 
-        $app->get('/rectangle:{width}:{height}', function ($this->width, $this->height) use ($app) {
+        $app->get('/rectangle:{width}:{height}', function ($width, $height) use ($app) {
         $return = new Rectangle($this->width, $this->height);
         $return = $return->getArea();
         return $app->run();
