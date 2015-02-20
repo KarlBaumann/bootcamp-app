@@ -7,6 +7,10 @@
  * Time: 10:59 AM
  */
 
+
+namespace Bootcamp\Demo\Tests;
+
+use PHPUnit_Framework_TestCase;
 use Bootcamp\Demo\Cylinder;
 
 class CylinderTest extends PHPUnit_Framework_TestCase

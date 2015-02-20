@@ -6,6 +6,11 @@
  * Date: 2/20/2015
  * Time: 10:51 AM
  */
+
+namespace Bootcamp\Demo\Tests;
+
+use PHPUnit_Framework_TestCase;
+
 class CircleTest extends PHPUnit_Framework_TestCase
 {
     public function testCircle()
