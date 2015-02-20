@@ -4,7 +4,7 @@
  */
 namespace Bootcamp\Demo;
 
-abstract class Shape   ///////abstraction cannot be instantiated
+abstract class Shape ///////abstraction cannot be instantiated
 {
     /**
      * @var
@@ -14,6 +14,5 @@ abstract class Shape   ///////abstraction cannot be instantiated
     /**
      * @return mixed area of the shape
      */
-    public abstract function getArea(); ///apstract function forces child classes to implement it
-
+    abstract public function getArea(); ///apstract function forces child classes to implement it
 }
