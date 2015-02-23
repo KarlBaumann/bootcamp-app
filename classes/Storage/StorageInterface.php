@@ -9,7 +9,7 @@
 
 namespace Bootcamp\Demo\Storage;
 
-interface Storage
+interface StorageInterface
 {
     public function store($place, $data);
 

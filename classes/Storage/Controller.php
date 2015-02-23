@@ -14,7 +14,7 @@ class Controller
     public $data;
     public $s;
 
-    public function __construct(Storage $store)
+    public function __construct(StorageInterface $store)
     {
         $this->s = $store;
     }

@@ -9,13 +9,14 @@
 
 namespace Bootcamp\Demo\Tests;
 
+use Bootcamp\Demo\Shapes;
 use PHPUnit_Framework_TestCase;
 
 class CircleTest extends PHPUnit_Framework_TestCase
 {
     public function testCircle()
     {
-        $circle = new \Bootcamp\Demo\Circle(1);
+        $circle = new Shapes\Circle(1);
         $this->assertEquals(M_PI, $circle->getArea());
     }
 }

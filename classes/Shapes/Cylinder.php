@@ -9,7 +9,7 @@
 /**
  * Class Cylinder
  */
-namespace Bootcamp\Demo;
+namespace Bootcamp\Demo\Shapes;
 
 class Cylinder extends Circle
 {

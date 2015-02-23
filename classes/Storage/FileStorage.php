@@ -8,7 +8,7 @@
 
 namespace Bootcamp\Demo\Storage;
 
-class FileStorage implements Storage
+class FileStorage implements StorageInterface
 {
 
     protected $db = [];

@@ -7,7 +7,7 @@
  */
 
 
-namespace Bootcamp\Demo;
+namespace Bootcamp\Demo\Shapes;
 
 /**
  * Class Circle

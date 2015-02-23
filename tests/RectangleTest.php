@@ -9,13 +9,14 @@
 
 namespace Bootcamp\Demo\Tests;
 
+use Bootcamp\Demo\Shapes;
 use PHPUnit_Framework_TestCase;
 
 class RectangleTest extends PHPUnit_Framework_TestCase
 {
     public function testRectangle()
     {
-        $rectangle = new \Bootcamp\Demo\Rectangle(5, 2);
+        $rectangle = new Shapes\Rectangle(2, 5);
         $this->assertEquals(10, $rectangle->getArea());
     }
 }

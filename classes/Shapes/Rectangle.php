@@ -9,7 +9,7 @@
 /**
  * Class Rectangle
  */
-namespace Bootcamp\Demo;
+namespace Bootcamp\Demo\Shapes;
 
 class Rectangle extends Shape
 {

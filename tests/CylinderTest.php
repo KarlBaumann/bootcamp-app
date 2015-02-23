@@ -11,7 +11,7 @@
 namespace Bootcamp\Demo\Tests;
 
 use PHPUnit_Framework_TestCase;
-use Bootcamp\Demo\Cylinder;
+use Bootcamp\Demo\Shapes\Cylinder;
 
 class CylinderTest extends PHPUnit_Framework_TestCase
 {

@@ -2,7 +2,7 @@
 /**
  * Class Shape
  */
-namespace Bootcamp\Demo;
+namespace Bootcamp\Demo\Shapes;
 
 abstract class Shape ///////abstraction cannot be instantiated
 {
