@@ -6,31 +6,12 @@
  * Time: 5:11 PM
  */
 
-
 require_once __DIR__ . '/vendor/autoload.php';
-use Bootcamp\Demo\Rectangle;
 
-class SilexRectangle
-{
-    public $width;
-    public $height;
+$app = new Silex\Application();
 
-    function __construct($w, $h)
-    {
-        $this->height = $h;
-        $this->width = $w;
-    }
+$app->get('/hello/{name}', function ($name) use ($app) {
+    return 'Hello ' . $app->escape($name);
+});
 
-    public function ahhh()
-    {
-        $app = new Silex\Application();
-
-        $app->get('/rectangle:{width}:{height}', function ($width, $height) use ($app) {
-        $return = new Rectangle($this->width, $this->height);
-        $return = $return->getArea();
-        return $app->run();
-    });
-
-
-    }
-}
+$app->run();

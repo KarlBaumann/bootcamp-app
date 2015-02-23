@@ -44,7 +44,7 @@ foreach ($questions as $question) {
     $quiz->addQuestion($question);
 }
 
-//var_dump($questions[1]->multiAnswer());
+var_dump($questions[1]->multiAnswer());
 
 
 //echo '<pre>';
