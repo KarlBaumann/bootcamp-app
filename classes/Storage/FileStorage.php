@@ -18,9 +18,12 @@ class FileStorage implements StorageInterface
         $this->db['data'] = $data;
         $this->db['place'] = $place;
 
-//var_dump($data);
+        $file = 'FileStorage.json';
 
-        return $data['aaa'] . ' stored in ' . $place;
+        $content = file_get_contents($file);
+        $content .= json_encode($data);
+        file_put_contents($file, $content);
+
     }
 
     public function get($place)

@@ -3,3 +3,6 @@ composer.phar
 adminer.php
 .idea
 /cov/
+/node_modules/
+/public/css/
+/public/js/
